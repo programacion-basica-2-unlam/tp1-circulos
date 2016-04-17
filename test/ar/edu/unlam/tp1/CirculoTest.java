@@ -1,55 +1,45 @@
-package ar.edu.unlam.tp1;
+package ar.edu.unlam.practico1;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CirculoTest {
-
-	
 	
 	@Test
-	public void crearUnCirculoConRadio2() {
-		fail("Not yet implemented");
+	public void queSeCreeUnCirculoConRadioDos(){
+		Circulo miCirculo = new Circulo(2.00);
+		assertEquals(2, miCirculo.darRadio(), 0.01);
 	}
 	
 	@Test
-	public void crearUnCirculoConRadio3Punto7() {
-		fail("Not yet implemented");
+	public void queSeCreeUnCirculoConRadioTresPuntoSiete(){
+		Circulo miCirculo = new Circulo(3.7);
+		assertEquals(3.7, miCirculo.darRadio(), 0.01); 
 	}
 	
 	@Test
-	public void crearUnCirculoConRadio5() {
-		fail("Not yet implemented");
+	public void queSeCreeUnCirculoConRadioCinco(){
+		Circulo miCirculo = new Circulo(5.00);
+		assertEquals(5, miCirculo.darRadio(), 0.01);
 	}
 	
 	@Test
-	public void crearUnCirculoConRadio10Punto9() {
-		fail("Not yet implemented");
+	public void queSeCreeUnCirculoConRadioDiezPuntoNueve(){
+		Circulo miCirculo = new Circulo(10.9);
+		assertEquals(10.9, miCirculo.darRadio(), 0.01);
 	}
 	
 	@Test
-	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void crearUnCirculoConRadio16Punto6Es865Punto67() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void queElTipDeAyudaDeVerde(){ // :)
+	public void queElPerimetroDeUnCirculoConRadio9Punto8Es61Punto57() {
+		Circulo miCirculo = new Circulo(9.80);
 		
-		Double esperado = 1.10;
-		Double actual = 1.10;
-		
-		/**
-		 *  Recordar que el siguiente método se puede usar por que al inicio del archivo
-		 *  se importaron todos los assert con la siguiente linea 
-		 *  import static org.junit.Assert.*; 
-		 */
-		 
-		assertEquals(esperado.doubleValue(), actual.doubleValue(),0.01);
+		assertEquals(miCirculo.calcularPerimetro(), 61.57, 0.01);
 	}
 	
+	@Test
+	public void queElAreaDeUnCirculoConRadio16Punto6Es865Punto69() {
+		Circulo miCirculo = new Circulo(16.60);
+		
+		assertEquals(miCirculo.calcularArea(), 865.69, 0.01);
+	}
 }
